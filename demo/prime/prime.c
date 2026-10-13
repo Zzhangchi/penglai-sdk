@@ -3,7 +3,7 @@
 
 int prime_loop(int num)
 {
-  unsigned long count;
+  unsigned long count = 0;
   int i;
   for(i = 2; i < num; i++)
   {
@@ -18,6 +18,7 @@ int prime(unsigned long * args)
   eapp_print("%s is running\n", "Prime");
   unsigned long ret;
   ret = prime_loop(111);
+  eapp_print("ret = %ld\n", (long)ret);
   EAPP_RETURN(ret);
 }
 
